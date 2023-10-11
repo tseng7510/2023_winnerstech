@@ -1,0 +1,120 @@
+.catalogBox .mainBox {
+  padding: 3% 0;
+}
+
+.catalog .listBox {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+.catalog .item {
+  width: calc((100% - 72px) / 4);
+  position: relative;
+  background: #fff;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2);
+}
+@media screen and (max-width: 1000px) {
+  .catalog .item {
+    width: calc((100% - 48px) / 2);
+  }
+}
+@media screen and (max-width: 575px) {
+  .catalog .item {
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+}
+.catalog .item::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  display: block;
+  border: 2px solid transparent;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+.catalog .item a {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.catalog .item .picBox .pic {
+  display: block;
+  transition: all 0.3s ease;
+}
+.catalog .item .picBox .pic img {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 300/424;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.catalog .item .infoBox {
+  padding: 30px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+@media screen and (max-width: 1000px) {
+  .catalog .item .infoBox {
+    padding: 20px;
+  }
+}
+.catalog .item .infoBox .title {
+  max-height: 90px;
+  font-size: 1.5rem;
+  font-weight: 500;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  line-height: 1.2;
+  margin-bottom: 25px;
+  font-weight: 700;
+}
+@media screen and (max-width: 1000px) {
+  .catalog .item .infoBox .title {
+    font-size: 1.25rem;
+  }
+}
+.catalog .item .infoBox .download {
+  padding: 10px;
+  border-radius: 8px;
+  background: #fff;
+  color: #19647e;
+  border: #19647e 1px solid;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.125rem;
+  font-weight: 700;
+  transition: all 0.3s ease;
+}
+.catalog .item .infoBox .download::after {
+  content: "";
+  width: 19px;
+  aspect-ratio: 1;
+  display: block;
+  -webkit-mask: url("../images/icon_download.svg");
+          mask: url("../images/icon_download.svg");
+  background: #ec6b00;
+  margin-left: 15px;
+  transition: all 0.3s ease;
+}
+.catalog .item:hover {
+  box-shadow: 0 0 15px 0 rgba(236, 107, 0, 0.5);
+}
+.catalog .item:hover::before {
+  border-color: #ec6b00;
+}
+.catalog .item:hover .download {
+  color: #fff;
+  background: #ec6b00;
+  border-color: #ec6b00;
+}
+.catalog .item:hover .download::after {
+  background: #fff;
+}/*# sourceMappingURL=catalog.css.map */

@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+    <style>
+      html,
+      body {
+        position: relative;
+        height: 100%;
+      }
+
+      body {
+        background: #eee;
+        font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        color: #000;
+        margin: 0;
+        padding: 0;
+      }
+
+      .swiper {
+        width: 300px;
+        height: 50%;
+      }
+
+      .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #e5e5e5;
+        height: auto;
+        padding: 20px 0;
+      }
+      .swiper-slide-active {
+        background: #ffaaaa;
+      }
+
+      nav {
+        width: 300px;
+        height: 100%;
+      }
+      .active {
+        background: #ffaaaa;
+      }
+      .big {
+        font-size: 40px;
+        display: flex;
+        align-items: flex-start;
+      }
+      .test {
+        position: relative;
+        animation: test 0.5s ease-in forwards;
+      }
+      .test span {
+        width: 24px;
+        text-align: center;
+        display: block;
+      }
+      p {
+        margin: 0;
+        padding: 0;
+      }
+      .old {
+        position: absolute;
+        animation: old 0.5s linear forwards;
+      }
+      .new {
+        animation: new 0.5s linear forwards;
+      }
+
+      /* @keyframes test {
+        from {
+          transform: translateY(0%);
+        }
+        to {
+          transform: translateY(-50%);
+        }
+      } */
+      @keyframes old {
+        from {
+          opacity: 1;
+        }
+        to {
+          transform: translateY(-20%);
+          opacity: 0;
+        }
+      }
+      @keyframes new {
+        from {
+          transform: translateY(50%);
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <div class="year">2023</div>
+          <p>test</p>
+          <p>test</p>
+        </div>
+        <div class="swiper-slide">
+          <div class="year">2022</div>
+          <p>test</p>
+          <p>test</p>
+        </div>
+        <div class="swiper-slide">
+          <div class="year">2021</div>
+          <p>test</p>
+          <p>test</p>
+        </div>
+        <div class="swiper-slide">
+          <div class="year">2020</div>
+          <p>test</p>
+          <p>test</p>
+        </div>
+        <div class="swiper-slide">
+          <div class="year">2019</div>
+          <p>test</p>
+          <p>test</p>
+        </div>
+        <div class="swiper-slide">
+          <div class="year">2008</div>
+          <p>test</p>
+          <p>test</p>
+        </div>
+        <div class="swiper-slide">
+          <div class="year">1998</div>
+          <p>test</p>
+          <p>test</p>
+        </div>
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+    <!-- <nav>
+      <div class="swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            2023
+            <p>test</p>
+            <p>test</p>
+            <p>test</p>
+            <p>test</p>
+          </div>
+          <div class="swiper-slide">
+            2023
+            <p>test</p>
+            <p>test</p>
+          </div>
+          <div class="swiper-slide">
+            2022
+            <p>test</p>
+            <p>test</p>
+          </div>
+          <div class="swiper-slide">
+            2021
+            <p>test</p>
+            <p>test</p>
+            <p>test</p>
+            <p>test</p>
+          </div>
+          <div class="swiper-slide">2021</div>
+          <div class="swiper-slide">
+            2020
+            <p>test</p>
+            <p>test</p>
+            <p>test</p>
+            <p>test</p>
+          </div>
+          <div class="swiper-slide">2019</div>
+          <div class="swiper-slide">2012</div>
+          <div class="swiper-slide">
+            2010
+            <p>test</p>
+            <p>test</p>
+            <p>test</p>
+            <p>test</p>
+          </div>
+          <div class="swiper-slide">2009</div>
+          <div class="swiper-slide">
+            2004
+            <p>test</p>
+            <p>test</p>
+          </div>
+          <div class="swiper-slide">1998</div>
+          <div class="swiper-slide">1995</div>
+          <div class="swiper-slide">1990</div>
+        </div>
+      </div>
+    </nav> -->
+    <div class="big">2023</div>
+
+    <script>
+      let li = document.querySelectorAll('.swiper-slide');
+      let big = document.querySelector('.big');
+      let lastNumber = '2023';
+
+      let swiper = new Swiper('.mySwiper', {
+        direction: 'vertical',
+        slidesPerView: 'auto',
+        mousewheel: true,
+        centeredSlides: true,
+        loop: true,
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+        },
+        on: {
+          slideChangeTransitionStart: function () {
+            if (lastNumber !== document.querySelector('.mySwiper .swiper-slide-active .year').innerText) {
+              big.innerHTML = '';
+              let nowCount = document.querySelector('.mySwiper .swiper-slide-active .year').innerText.split('');
+              let lastCount = lastNumber.split('');
+              console.log('last', lastCount, 'now', nowCount);
+              nowCount.forEach((e, i) => {
+                if (lastCount[i] === e) {
+                  big.innerHTML += `<span>${e}</span>`;
+                } else {
+                  big.innerHTML += `<div class='test'><span class="old">${lastCount[i]}</span><span class='new'>${e}</span></div>`;
+                }
+              });
+              lastNumber = document.querySelector('.mySwiper .swiper-slide-active .year').innerText;
+            }
+          },
+        },
+      });
+    </script>
+  </body>
+</html>

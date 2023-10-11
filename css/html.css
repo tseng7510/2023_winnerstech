@@ -1,0 +1,24 @@
+.mainBox::before,
+.mainBox::after,
+.pageTitle::before {
+  display: none;
+}
+
+.html .editor {
+  max-width: 1140px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 9;
+  font-size: 1.25rem;
+  color: #666666;
+  line-height: 1.7;
+}
+@media screen and (max-width: 767px) {
+  .html .editor {
+    font-size: 1.125rem;
+  }
+}
+.html .editor span.title {
+  color: #ec6b00;
+  font-weight: 500;
+}/*# sourceMappingURL=html.css.map */
