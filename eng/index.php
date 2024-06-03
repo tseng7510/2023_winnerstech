@@ -17,6 +17,7 @@
       <div class="banner wow">
         <div class="listBox">
           <div class="item"><img src="../images/index/banner.jpg" alt=""></div>
+          <div class="item"><img src="../images/index/banner.jpg" alt=""></div>
         </div>
       </div>
 
@@ -58,51 +59,51 @@
             <ul>
               <li>
                 <div class="item">
-                 <a href="solution.php">
-                  <div class="icon">
-                    <img src="../images/index/industries_icon01.svg" alt="">
-                  </div>
-                  <div class="title">Transportation</div>
+                  <a href="solution.php">
+                    <div class="icon">
+                      <img src="../images/index/industries_icon01.svg" alt="">
+                    </div>
+                    <div class="title">Transportation</div>
                   </a>
                 </div>
               </li>
               <li>
                 <div class="item">
-                 <a href="solution.php">
-                  <div class="icon">
-                    <img src="../images/index/industries_icon02.svg" alt="">
-                  </div>
-                  <div class="title">background</div>
+                  <a href="solution.php">
+                    <div class="icon">
+                      <img src="../images/index/industries_icon02.svg" alt="">
+                    </div>
+                    <div class="title">background</div>
                   </a>
                 </div>
               </li>
               <li>
                 <div class="item">
-                <a href="solution.php">
-                  <div class="icon">
-                    <img src="../images/index/industries_icon03.svg" alt="">
-                  </div>
-                  <div class="title">Aerospace</div>
+                  <a href="solution.php">
+                    <div class="icon">
+                      <img src="../images/index/industries_icon03.svg" alt="">
+                    </div>
+                    <div class="title">Aerospace</div>
                   </a>
                 </div>
               </li>
               <li>
                 <div class="item">
-                <a href="solution.php">
-                  <div class="icon">
-                    <img src="../images/index/industries_icon04.svg" alt="">
-                  </div>
-                  <div class="title">Parts Processing</div>
+                  <a href="solution.php">
+                    <div class="icon">
+                      <img src="../images/index/industries_icon04.svg" alt="">
+                    </div>
+                    <div class="title">Parts Processing</div>
                   </a>
                 </div>
               </li>
               <li>
                 <div class="item">
-                <a href="solution.php">
-                  <div class="icon">
-                    <img src="../images/index/industries_icon05.svg" alt="">
-                  </div>
-                  <div class="title">Mold Making</div>
+                  <a href="solution.php">
+                    <div class="icon">
+                      <img src="../images/index/industries_icon05.svg" alt="">
+                    </div>
+                    <div class="title">Mold Making</div>
                   </a>
                 </div>
               </li>
@@ -148,9 +149,11 @@
       arrows: false,
       loop: true,
       infinite: true,
-      appendArrows: $('.newsBox .titleBox .controlBox'),
-      prevArrow: '<button class="slick-prev" aria-label="Previous" type="button" title="Previous"></button>',
-      nextArrow: '<button class="slick-next" aria-label="Next" type="button" title="Next"></button>',
+      autoplay: true,
+      autoplaySpeed: 6000,
+      // appendArrows: $('.newsBox .titleBox .controlBox'),
+      // prevArrow: '<button class="slick-prev" aria-label="Previous" type="button" title="Previous"></button>',
+      // nextArrow: '<button class="slick-next" aria-label="Next" type="button" title="Next"></button>',
     });
   </script>
 
