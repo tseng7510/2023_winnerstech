@@ -25,7 +25,7 @@
         <section class="productsBox wow">
           <div class="container">
             <div class="listBox">
-              <? for ($i = 0; $i < 3; $i++) { ?>
+              <? for ($i = 0; $i < 10; $i++) { ?>
                 <div class="item wow fadeInRight">
                   <a href="#">
                     <div class="pic"><img src="../images/index/products.png" alt=""></div>
@@ -35,6 +35,7 @@
                 </div>
               <? } ?>
             </div>
+            <div class="control"></div>
           </div>
         </section>
 
@@ -154,6 +155,38 @@
       // appendArrows: $('.newsBox .titleBox .controlBox'),
       // prevArrow: '<button class="slick-prev" aria-label="Previous" type="button" title="Previous"></button>',
       // nextArrow: '<button class="slick-next" aria-label="Next" type="button" title="Next"></button>',
+    });
+    $('.productsBox .listBox').slick({
+      slidesToShow: 4,
+      slidesToScroll: 1,
+      dots: false,
+      arrows: true,
+      loop: true,
+      infinite: true,
+      autoplay: true,
+      autoplaySpeed: 6000,
+      appendArrows: $('.productsBox .control'),
+      prevArrow: '<button class="slick-prev" aria-label="Previous" type="button" title="Previous"></button>',
+      nextArrow: '<button class="slick-next" aria-label="Next" type="button" title="Next"></button>',
+      responsive: [{
+          breakpoint: 1024,
+          settings: {
+            slidesToShow: 3
+          }
+        },
+        {
+          breakpoint: 768,
+          settings: {
+            slidesToShow: 2
+          }
+        },
+        {
+          breakpoint: 550,
+          settings: {
+            slidesToShow: 1
+          }
+        }
+      ]
     });
   </script>
 

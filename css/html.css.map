@@ -1,1 +1,0 @@
-{"version":3,"sources":["../scss/html.scss","html.css","../scss/partials/_mixin.scss","../scss/partials/_variable.scss"],"names":[],"mappings":"AAGA;;;EAGE,aAAA;ACFF;;ADME;EACE,iBAAA;EACA,cAAA;EACA,kBAAA;EACA,UAAA;EACA,kBAAA;EACA,cAAA;EACA,gBAAA;ACHJ;ACgDI;EFpDF;IASI,mBAAA;ECDJ;AACF;ADGI;EACE,cGrBM;EHsBN,gBAAA;ACDN","file":"html.css"}

@@ -24,8 +24,9 @@
     flex-direction: column;
   }
 }
-.productsPage .listBox .item a::before, .productsPage .listBox .item a::after {
-  content: "";
+.productsPage .listBox .item a::before,
+.productsPage .listBox .item a::after {
+  content: '';
   position: absolute;
   display: block;
   pointer-events: none;
@@ -40,7 +41,7 @@
   aspect-ratio: 201/161;
   top: 0;
   left: 0;
-  background-image: url("../images/in/products_hover.png");
+  background-image: url('../images/in/products_hover.png');
   background-position: 0 0;
 }
 @media screen and (max-width: 767px) {
@@ -54,7 +55,7 @@
   aspect-ratio: 152/123;
   right: 0;
   bottom: 0;
-  background-image: url("../images/in/products_hover2.png");
+  background-image: url('../images/in/products_hover2.png');
   background-position: right bottom;
 }
 @media screen and (max-width: 767px) {
@@ -65,7 +66,8 @@
 .productsPage .listBox .item a:hover {
   box-shadow: 0 0 15px 0 rgba(25, 100, 126, 0.4);
 }
-.productsPage .listBox .item a:hover::before, .productsPage .listBox .item a:hover::after {
+.productsPage .listBox .item a:hover::before,
+.productsPage .listBox .item a:hover::after {
   opacity: 1;
 }
 .productsPage .listBox .item a:hover .pic img {
@@ -97,7 +99,7 @@
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   transition: all 10s ease;
 }
 .productsPage .listBox .item .infoBox {
@@ -124,7 +126,7 @@
   }
 }
 .productsPage .listBox .item .infoBox::before {
-  content: "";
+  content: '';
   position: absolute;
   display: block;
   inset: 0px 0 0 -150px;
@@ -190,7 +192,7 @@
   transition: all 0.3s ease;
 }
 .productsPage .listBox .item .infoBox .more::before {
-  content: "";
+  content: '';
   inset: 2px;
   position: absolute;
   display: block;
@@ -284,7 +286,7 @@
   }
 }
 .productsListBox .productsList .listBox .item::before {
-  content: "";
+  content: '';
   position: absolute;
   inset: 0;
   display: block;
@@ -339,7 +341,7 @@
 
 .productsDetailBox::after {
   top: 450px;
-  background-image: url("../images/index/bg6.png");
+  background-image: url('../images/index/bg6.png');
 }
 @media screen and (max-width: 1000px) {
   .productsDetailBox::after {
@@ -369,7 +371,7 @@
   max-width: 1250px;
 }
 .productsDetailBox .productsTopBox::after {
-  content: "";
+  content: '';
   display: block;
   clear: both;
 }
@@ -410,7 +412,7 @@
   margin-bottom: 30px;
   letter-spacing: 1px;
   line-height: 1;
-  font-family: "Khula", "Noto Sans TC", Arial, "微軟正黑體", "Microsoft JhengHei", "蘋果儷中黑", "Apple LiGothic Medium", sans-serif, "0xe804";
+  font-family: 'Khula', 'Noto Sans TC', Arial, '微軟正黑體', 'Microsoft JhengHei', '蘋果儷中黑', 'Apple LiGothic Medium', sans-serif, '0xe804';
   border-bottom: #f2f4f5 3px solid;
 }
 @media screen and (max-width: 1000px) {
@@ -443,14 +445,14 @@
   padding-left: 20px;
 }
 .productsDetailBox .productsTopBox .description ul li::before {
-  content: "";
+  content: '';
   position: absolute;
   left: 0px;
   top: 3px;
   display: block;
   width: 8px;
   height: 20px;
-  background: url("../images/in/list_icon.png") no-repeat;
+  background: url('../images/in/list_icon.png') no-repeat;
 }
 .productsDetailBox .productsTopBox .description ul li + li {
   margin-top: 20px;
@@ -469,7 +471,7 @@
   padding: 26px 40px;
   background: none;
   -webkit-clip-path: polygon(20px 0%, 100% 0%, calc(100% - 20px) 100%, 0% 100%);
-          clip-path: polygon(20px 0%, 100% 0%, calc(100% - 20px) 100%, 0% 100%);
+  clip-path: polygon(20px 0%, 100% 0%, calc(100% - 20px) 100%, 0% 100%);
   position: relative;
   isolation: isolate;
 }
@@ -486,7 +488,7 @@
   }
 }
 .productsDetailBox .centerBtnBox .buttonBox button::before {
-  content: "";
+  content: '';
   position: absolute;
   inset: 0;
   z-index: -1;
@@ -498,7 +500,8 @@
 .productsDetailBox .centerBtnBox .buttonBox button + button {
   margin-left: -20px;
 }
-.productsDetailBox .centerBtnBox .buttonBox button.active::before, .productsDetailBox .centerBtnBox .buttonBox button:hover::before {
+.productsDetailBox .centerBtnBox .buttonBox button.active::before,
+.productsDetailBox .centerBtnBox .buttonBox button:hover::before {
   opacity: 1;
 }
 .productsDetailBox .controlBox {
@@ -510,7 +513,7 @@
   aspect-ratio: 1;
   padding: 0;
   margin: 0 10px;
-  background: url("../images/slick_arrow.png") no-repeat;
+  background: url('../images/slick_arrow.png') no-repeat;
   background-size: contain;
   transition: all 0.3s ease;
 }
@@ -589,6 +592,8 @@
   font-size: 1.3125rem;
   color: #19647e;
   margin-bottom: 5px;
+  padding-left: 20px;
+  background: url('../images/in/list_icon.png') 0 6px no-repeat;
 }
 @media screen and (max-width: 1000px) {
   .productsDetail .list .title {
@@ -599,7 +604,6 @@
   font-size: 1.125rem;
   color: #38393d;
   padding-left: 20px;
-  background: url("../images/in/list_icon.png") no-repeat;
 }
 @media screen and (max-width: 1000px) {
   .productsDetail .list .description {
@@ -608,4 +612,4 @@
 }
 .productsDetail .list li + li {
   margin-top: 20px;
-}/*# sourceMappingURL=products.css.map */
+} /*# sourceMappingURL=products.css.map */
